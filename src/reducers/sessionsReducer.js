@@ -3,8 +3,12 @@ const initialState = {
   loading: true
 }
 
-const sessionsReducer = (state, action) => {
+const sessionsReducer = (state = initialState, action) => {
+  
   switch(action.type){
+
+    case 'FETCH_SESSIONS': 
+      return {sessions: action.payload}
     default:
       return state;
   }

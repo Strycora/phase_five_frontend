@@ -1,23 +1,30 @@
 import React from 'react'
-import './App.css';
+import {connect} from 'react-redux';
+import {fetchSessions} from './actions/fetchSessions'
+import SessionsContainer from './containers/SessionsContainer'
 
 
 
 class App extends React.Component {
 
-componentDidMount(){
-  fetch('http://localhost:3001/sessions')
-  .then(resp => resp.json())
-  .then(data => console.log(data))
-}
+// componentDidMount(){
+//   this.props.fetchSessions({type:'FETCH_SESSIONS', payload: {name: 'Chest Day 1'}})
+// }
 
   render(){
   return (
     <div className="App">
-      App
+      <SessionsContainer/>
     </div>
   );
   }
 }
 
-export default App;
+// const mapStateToProps = (state) => {
+//   return {
+//     sessions: state.sessions
+//   }
+// }
+
+
+export default connect(null, {fetchSessions})(App);
