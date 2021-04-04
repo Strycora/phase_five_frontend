@@ -1,6 +1,7 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom'
 import {useParams} from 'react-router-dom'
+import WorkoutsContainer from '../containers/WorkoutsContainer'
 
 const Session = (props) => {
 
@@ -16,10 +17,12 @@ const Session = (props) => {
   
   // console.log(session)
   return (
-    <li>
-        {session ? null : <Redirect to='/sessions'/>}
-        {session ? session.name : null} - {session ? session.date : null} 
-    </li>
+    <div>
+      <h2>
+          {session ? session.name : null} - {session ? session.date : null} 
+      </h2>
+      <WorkoutsContainer session={session}/>
+    </div>  
   )
 } 
 
