@@ -5,6 +5,7 @@ import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 import App from './App';
 import sessionsReducer from './reducers/sessionsReducer'
+import {BrowserRouter as Router} from 'react-router-dom'
 // import reportWebVitals from './reportWebVitals';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -14,7 +15,9 @@ let store = createStore(sessionsReducer, composeEnhancers(applyMiddleware(thunk)
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );

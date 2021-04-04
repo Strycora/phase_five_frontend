@@ -7,9 +7,6 @@ import SessionsContainer from './containers/SessionsContainer'
 
 class App extends React.Component {
 
-// componentDidMount(){
-//   this.props.fetchSessions({type:'FETCH_SESSIONS', payload: {name: 'Chest Day 1'}})
-// }
 
   render(){
   return (
