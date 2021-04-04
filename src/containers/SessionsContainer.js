@@ -15,7 +15,7 @@ class SessionsContainer extends React.Component{
 
     return(
       <div>
-        <SessionInput />
+        <SessionInput /><br></br>
         <Sessions sessions={this.props.sessions} />
       </div>
     )
