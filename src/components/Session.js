@@ -12,7 +12,8 @@ const Session = (props) => {
   // console.log(sessions)
   // console.log(id)
   console.log(props)
- let session = props.sessions[props.match.params.id -1]
+//  let session = props.sessions[props.match.params.id -1]
+  let session = props.sessions.filter(session => session.id == props.match.params.id)[0]
  console.log(session)
   
   // console.log(session)

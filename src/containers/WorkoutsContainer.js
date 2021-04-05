@@ -7,7 +7,7 @@ class WorkoutsContainer extends React.Component{
   render(){
     return(
       <div>
-        <WorkoutInput />
+        <WorkoutInput session={this.props.session}/>
         <Workouts workouts={this.props.session && this.props.session.workouts} />
       </div>
     )
