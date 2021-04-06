@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
 import {fetchInspirations} from '../actions/fetchInspirations'
-// import InspirationInput from '../components/InspirationInput'
+import InspirationInput from '../components/InspirationInput'
 import Inspiration from '../components/Inspiration'
 import Inspirations from '../components/Inspirations'
 
@@ -21,7 +21,7 @@ class InspirationsContainer extends React.Component{
     return(
       <div>
         <Switch>
-          {/* <Route path='/bests/new' component={BestInput}/> */}
+          <Route path='/inspirations/new' component={InspirationInput}/>
           <Route path='/inspirations/:id' render={(routerProps) => <Inspiration {...routerProps} inspirations={this.props.inspirations}/>}/>
           <Route path='/inspirations' render={(routerProps) => <Inspirations {...routerProps} inspirations={this.props.inspirations}/>}/>
         </Switch>

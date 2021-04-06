@@ -11,6 +11,8 @@ export class Nav extends Component {
           <li><Link to='/sessions/new'>New Session</Link></li>
           <li><Link to='/bests'>Personal Bests</Link></li>
           <li><Link to='/bests/new'>New Personal Best</Link></li>
+          <li><Link to='/inspirations'>My Inspirations</Link></li>
+          <li><Link to='/inspirations/new'>Add an Inspiration</Link></li>
 
         </ul>
       </div>
