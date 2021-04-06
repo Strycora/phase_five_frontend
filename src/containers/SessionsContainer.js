@@ -30,7 +30,7 @@ class SessionsContainer extends React.Component{
 const mapStateToProps = state => {
 
   return {
-    sessions: state.sessions
+    sessions: state.sessions.sessions
   }
 }
 

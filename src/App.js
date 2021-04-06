@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux';
 import {fetchSessions} from './actions/fetchSessions'
 import SessionsContainer from './containers/SessionsContainer'
+import BestsContainer from './containers/BestsContainer'
 import Home from './components/Home'
 import Nav from './components/Nav'
 import {Switch, Route} from 'react-router-dom'
@@ -20,6 +21,7 @@ class App extends React.Component {
         
       </Switch>
       <SessionsContainer/>
+      <BestsContainer/>
     </div>
   );
   }
@@ -32,4 +34,4 @@ class App extends React.Component {
 // }
 
 
-export default connect(null, {fetchSessions})(App);
+export default App;
