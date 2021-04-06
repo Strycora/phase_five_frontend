@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
 import {fetchBests} from '../actions/fetchBests'
+import BestInput from '../components/BestInput'
 import Best from '../components/Best'
 import Bests from '../components/Bests'
 
@@ -20,7 +21,7 @@ class BestsContainer extends React.Component{
     return(
       <div>
         <Switch>
-          {/* <Route path='/sessions/new' component={SessionInput}/> */}
+          <Route path='/bests/new' component={BestInput}/>
           <Route path='/bests/:id' render={(routerProps) => <Best {...routerProps} bests={this.props.bests}/>}/>
           <Route path='/bests' render={(routerProps) => <Bests {...routerProps} bests={this.props.bests}/>}/>
         </Switch>

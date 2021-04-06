@@ -9,6 +9,8 @@ export class Nav extends Component {
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/sessions'>Sessions</Link></li>
           <li><Link to='/sessions/new'>New Session</Link></li>
+          <li><Link to='/bests'>Personal Bests</Link></li>
+          <li><Link to='/bests/new'>New Personal Best</Link></li>
 
         </ul>
       </div>
