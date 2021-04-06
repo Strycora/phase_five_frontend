@@ -1,6 +1,5 @@
 const initialState = { 
-  sessions: [],
-  loading: true
+  sessions: []
 }
 
 const sessionsReducer = (state = initialState, action) => {
