@@ -9,6 +9,11 @@ const bestsReducer = (state = initialState, action) => {
       return {bests: action.payload}
     case 'ADD_BEST':
       return {...state, bests: [...state.bests, action.payload]}
+    case 'DELETE_BEST':
+      let bestDelete = state.bests.filter(best => {
+        return  (best.id !== action.payload.id)
+       })
+       return {...state, bests: bestDelete}
     default:
       return state  
   }
