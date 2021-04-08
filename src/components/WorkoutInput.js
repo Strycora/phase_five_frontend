@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addWorkout} from '../actions/addWorkout'
+import { TextField } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 class WorkoutInput extends React.Component{
 
@@ -32,16 +34,16 @@ class WorkoutInput extends React.Component{
   render(){
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>Workout Name:</label>
-          <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/><br></br>
-          <label>Number of Sets:</label>
-          <input type="number" name="sets" value={this.state.sets} onChange={this.handleChange}/><br></br>
-          <label>Number of Reps:</label>
-          <input type="number" name="reps" value={this.state.reps} onChange={this.handleChange}/><br></br>
-          <label>Weight:</label>
-          <input type="number" name="weight" value={this.state.weight} onChange={this.handleChange}/><br></br>
-          <input type="submit" />
+        <form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+
+          <TextField label="Workout Name" variant="outlined" color="secondary" name="name" value={this.state.name} onChange={this.handleChange}></TextField><br></br>
+          {/* <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/><br></br> */}
+          <TextField label="Number of Sets" type="number" variant="outlined" color="secondary" name="sets" value={this.state.sets} onChange={this.handleChange}></TextField><br></br>
+          {/* <input type="number" name="sets" value={this.state.sets} onChange={this.handleChange}/><br></br> */}
+          <TextField label="Number of Reps" type="number" variant="outlined" color="secondary" name="reps" value={this.state.reps} onChange={this.handleChange}></TextField><br></br>
+          <TextField label="Weight" type="number" variant="outlined" color="secondary" name="weight" value={this.state.weight} onChange={this.handleChange}></TextField><br></br>
+          {/* <input type="number" name="weight" value={this.state.weight} onChange={this.handleChange}/><br></br> */}
+          <Button variant="contained" color="primary" type="submit">Submit</Button>
         </form>
       </div>
     )
