@@ -4,7 +4,8 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        Welcome to TrainingBuddy!
+        <h1>Welcome to TrainingBuddy!</h1><br></br>
+        <img src="https://i.ytimg.com/vi/6t3OU5rsR28/maxresdefault.jpg"/>
       </div>
     )
   }
