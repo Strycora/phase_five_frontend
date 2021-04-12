@@ -5,6 +5,7 @@ import {deleteBest} from '../actions/deleteBest'
 import { makeStyles } from '@material-ui/core/styles';
 import { List, ListItem, Button } from '@material-ui/core';
 import Best from './Best'
+import DeleteIcon from '@material-ui/icons/Delete'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,7 +29,7 @@ const Bests = (props) => {
     <div className={classes.root}>
       <List component="nav" aria-label="main">
       {props.bests.map(best => 
-         <ListItem> <Link to={`/bests/${best.id}`}>{best.name}</Link><Button variant="contained" color="primary" onClick={() => handleDelete(best)}>Delete</Button> </ListItem>)} 
+         <ListItem> <Link to={`/bests/${best.id}`}>{best.name}</Link><Button startIcon={<DeleteIcon />} variant="contained" color="primary" onClick={() => handleDelete(best)}>Delete</Button> </ListItem>)} 
       </List>
     </div>
     </>

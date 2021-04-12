@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import {deleteSession} from '../actions/deleteSession'
 import { makeStyles } from '@material-ui/core/styles';
 import { List, ListItem, Button } from '@material-ui/core';
-// import {fetchSessions} from '../actions/fetchSessions'
+import DeleteIcon from '@material-ui/icons/Delete'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +29,7 @@ const Sessions = (props) => {
     <div className={classes.root}>
       <List component="nav" aria-label="main">
       {props.sessions.map(session => 
-          <ListItem button><Link to={`/sessions/${session.id}`}> {session.name}</Link><Button variant="contained" color="primary" onClick={() => handleDelete(session)}>Delete</Button>  </ListItem>)} 
+          <ListItem button><Link to={`/sessions/${session.id}`}> {session.name}</Link><Button startIcon={<DeleteIcon />}variant="contained" color="primary" onClick={() => handleDelete(session)}>Delete</Button>  </ListItem>)} 
       </List>
     </div>
   )
