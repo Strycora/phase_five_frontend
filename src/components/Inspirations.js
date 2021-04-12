@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import {deleteInspiration} from '../actions/deleteInspiration'
 import { makeStyles } from '@material-ui/core/styles';
 import { List, ListItem, Button } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,9 +35,9 @@ const Inspirations = (props) => {
             <Link to={`/inspirations/${inspiration.id}`}>
               {inspiration.name}
             </Link>
-              <button onClick={() => handleDelete(inspiration)}>
-                Delete
-              </button> 
+            <Button startIcon={<DeleteIcon />} variant="contained" color="primary" onClick={() => handleDelete(inspiration)}>
+              Delete
+            </Button> 
           </ListItem>)} 
       </ List>
       </div>
