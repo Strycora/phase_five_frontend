@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addInspiration} from '../actions/addInspiration'
+import { Button } from '@material-ui/core';
+import { TextField } from '@material-ui/core';
 
 class InspirationInput extends React.Component{
 
@@ -29,14 +31,11 @@ class InspirationInput extends React.Component{
   render(){
    return (
     <div>
-      <form onSubmit={this.handleSubmit}>
-        <label>Inspiration Name:</label>
-        <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/><br></br>
-        <label>Image Url:</label>
-        <input type="text" placeholder="Image" name="image" value={this.state.image} onChange={this.handleChange}/><br></br>
-        <label>Bio:</label>
-        <textarea placeholder="Bio" name="bio" value={this.state.bio} onChange={this.handleChange}/><br></br>
-        <input type="submit" />
+      <form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+        <TextField label="Inspiration Name" variant="outlined" color="secondary" name="name" value={this.state.name} onChange={this.handleChange}></TextField><br></br>
+        <TextField label="Image URL" variant="outlined" color="secondary" name="image" value={this.state.image} onChange={this.handleChange}></TextField><br></br>
+        <TextField label="Bio" variant="outlined" color="secondary" name="bio" value={this.state.bio} onChange={this.handleChange}></TextField><br></br>
+        <Button variant="contained" color="primary" type="submit">Submit</Button>
       </form>
     </div>
    )
