@@ -5,12 +5,7 @@ import WorkoutsContainer from '../containers/WorkoutsContainer'
 
 const Session = (props) => {
 
-  // const {id} = useParams()
-  // const {sessions} = props
-  // const session = sessions.find(_session => _session.id == id)
-  // console.log(session)
-  // console.log(sessions)
-  // console.log(id)
+
   console.log(props)
 //  let session = props.sessions[props.match.params.id -1]
   let session = props.sessions.filter(session => session.id == props.match.params.id)[0]

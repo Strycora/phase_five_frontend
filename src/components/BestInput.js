@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addBest} from '../actions/addBest'
+import { TextField } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 class BestInput extends React.Component{
 
@@ -29,14 +31,11 @@ class BestInput extends React.Component{
   render(){
    return (
     <div>
-      <form onSubmit={this.handleSubmit}>
-        <label>Workout Name:</label>
-        <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/><br></br>
-        <label>Workout Weight:</label>
-        <input type="text" placeholder="Weight" name="weight" value={this.state.weight} onChange={this.handleChange}/><br></br>
-        <label>Workout Reps:</label>
-        <input type="text" placeholder="Reps" name="reps" value={this.state.reps} onChange={this.handleChange}/><br></br>
-        <input type="submit" />
+      <form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+        <TextField label="Workout Name" type="text" variant="outlined" color="secondary" name="name" value={this.state.name} onChange={this.handleChange}></TextField><br></br>
+        <TextField label="Workout Weight" type="number" variant="outlined" color="secondary" name="weight" value={this.state.weight} onChange={this.handleChange}></TextField><br></br>
+        <TextField label="Workout Reps" type="number" variant="outlined" color="secondary" name="reps" value={this.state.reps} onChange={this.handleChange}></TextField><br></br>
+        <Button variant="contained" color="primary" type="submit">Submit</Button>
       </form>
     </div>
    )

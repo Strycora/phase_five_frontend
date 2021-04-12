@@ -37,12 +37,10 @@ class WorkoutInput extends React.Component{
         <form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
 
           <TextField label="Workout Name" variant="outlined" color="secondary" name="name" value={this.state.name} onChange={this.handleChange}></TextField><br></br>
-          {/* <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/><br></br> */}
           <TextField label="Number of Sets" type="number" variant="outlined" color="secondary" name="sets" value={this.state.sets} onChange={this.handleChange}></TextField><br></br>
-          {/* <input type="number" name="sets" value={this.state.sets} onChange={this.handleChange}/><br></br> */}
           <TextField label="Number of Reps" type="number" variant="outlined" color="secondary" name="reps" value={this.state.reps} onChange={this.handleChange}></TextField><br></br>
           <TextField label="Weight" type="number" variant="outlined" color="secondary" name="weight" value={this.state.weight} onChange={this.handleChange}></TextField><br></br>
-          {/* <input type="number" name="weight" value={this.state.weight} onChange={this.handleChange}/><br></br> */}
+          
           <Button variant="contained" color="primary" type="submit">Submit</Button>
         </form>
       </div>
