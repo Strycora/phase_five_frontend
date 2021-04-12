@@ -30,7 +30,7 @@ const Sessions = (props) => {
       <List component="nav" aria-label="main">
       {props.sessions.map(session => 
           <ListItem button><Link to={`/sessions/${session.id}`}> {session.name}</Link><Button variant="contained" color="primary" onClick={() => handleDelete(session)}>Delete</Button>  </ListItem>)} 
-          </List>
+      </List>
     </div>
   )
   // 

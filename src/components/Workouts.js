@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {deleteWorkout} from '../actions/deleteWorkout'
 import { makeStyles } from '@material-ui/core/styles';
-import { List, ListItem } from '@material-ui/core';
+import { List, ListItem, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +30,7 @@ const Workouts = (props) =>{
        <List component="nav" aria-label="main">
       {props.workouts && props.workouts.map(workout =>
         // <li key={workout.id}>
-        <ListItem > {workout.name} - Sets: {workout.sets} - Reps: {workout.reps} - Weight: {workout.weight}lbs <button onClick={() => handleDelete(workout)}>Delete</button></ListItem>
+        <ListItem > {workout.name} - Sets: {workout.sets} - Reps: {workout.reps} - Weight: {workout.weight}lbs <Button variant="contained" color="primary" onClick={() => handleDelete(workout)}>Delete</Button></ListItem>
         
         )}
         </List>
