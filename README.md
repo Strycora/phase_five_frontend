@@ -3,8 +3,7 @@
 TrainingBuddy is a React/Redux application with a RAILS API backend that allows a user to keep track of workout sessions and each workout that is a part of that session, their personal bests, and people who inspire them to keep training. The application uses "Thunk middleware" so that asynchronous requests can be made between the Redux store and the backend API. Users can create, view and delete data from the backend using forms, links and buttons that dispatch actions to the store. The application was styled using the "MaterialUI library", in order to make the application more aesthetically pleasing than a regular HTML application.
 
 # Installation
-
-Go to https://github.com/Strycora/phase_five_backend and clone the code. Then run 'rails db:create' and 'rails db:migrate', and optionally, 'rails db:seed' in the backend terminal to get it ready. Then run 'rails s' and come back to the frontend. Run 'npm install' and 'npm start' or 'yarn start' to boot up the frontend.  
+Clone this repo, and then go to https://github.com/Strycora/phase_five_backend and clone the code. While in the terminal for the backend, run 'rails db:create' and 'rails db:migrate', and optionally, 'rails db:seed'. Then run 'rails s' and come back to the frontend. Run 'npm install' and 'npm start' or 'yarn start' to boot up the frontend.  
 
 # Usage 
 
